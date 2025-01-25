@@ -15,7 +15,7 @@ const Work = () => {
 					</span>
 
 					<div className="pt-8 text-center">
-						<a href={href} target="_blank">
+						<a href={href} target="_blank" rel="noopener noreferrer">
 							<button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
 								Live
 							</button>
