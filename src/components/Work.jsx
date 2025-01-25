@@ -5,7 +5,7 @@ import img3 from '../assets/images/img3.jpeg';
 const Work = () => {
 	const Works = ({ href, img }) => {
 		return (
-			<div className="transform transition-transform duration-300 hover:scale-105 overflow-hidden shadow-lg shadow-[#0d1722] group rounded-md flex justify-center items-center sm:h-[200px] h-[170px] bg-cover relative ">
+			<div className="transform transition-transform duration-300 hover:scale-105 overflow-hidden shadow-lg shadow-[#141f2b] group rounded-md flex justify-center items-center sm:h-[200px] h-[170px] bg-cover relative ">
 				<img src={img} alt="My project photos" loading="lazy" />
 
 				{/* Hover effect container */}
