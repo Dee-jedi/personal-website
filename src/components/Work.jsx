@@ -1,10 +1,12 @@
-import aboutImg from '../assets/images/aboutImg.jpg';
+import img1 from '../assets/images/img1.jpeg';
+import img2 from '../assets/images/img2.jpeg';
+import img3 from '../assets/images/img3.jpeg';
 
 const Work = () => {
-	const Works = ({ href }) => {
+	const Works = ({ href, img }) => {
 		return (
 			<div className="transform transition-transform duration-300 hover:scale-105 overflow-hidden shadow-lg shadow-[#040c16] group rounded-md flex justify-center items-center sm:h-[200px] h-[170px] bg-cover relative ">
-				<img src={aboutImg} alt="My project photos" loading="lazy" />
+				<img src={img} alt="My project photos" loading="lazy" />
 
 				{/* Hover effect container */}
 				<div className="opacity-0 group-hover:opacity-90 bg-[gray]/70 absolute inset-0 flex flex-col justify-center items-center">
@@ -36,9 +38,12 @@ const Work = () => {
 
 				{/* Grid layout for work items */}
 				<div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-					<Works href={'https://dee-jedi.github.io/Project_axios/'} />
-					<Works href={'/'} />
-					<Works href={'/'} />
+					<Works
+						href={'https://www.dee-jedi.github.io/Project_axios/'}
+						img={img1}
+					/>
+					<Works href={'https://www.uma-nu.vercel.app'} img={img3} />
+					<Works href={'https://www.uma-nu.vercel.app'} img={img2} />
 				</div>
 			</div>
 		</div>

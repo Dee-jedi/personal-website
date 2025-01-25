@@ -39,7 +39,7 @@ const Hero = () => {
 
 					<div className="pt-4">
 						<a
-							href="/resume/Divine-Resume.pdf"
+							href="/divine-resume.pdf"
 							download="Divine_Monday_Resume.pdf"
 							aria-label="Download CV"
 							className="px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-r from-[#004e92] to-[#000428] text-[#f0f0f0] shadow-lg hover:opacity-95 transition-transform duration-300 ease-in-out"
