@@ -5,7 +5,7 @@ import img3 from '../assets/images/img3.jpeg';
 const Work = () => {
 	const Works = ({ href, img }) => {
 		return (
-			<div className="transform transition-transform duration-300 hover:scale-105 overflow-hidden shadow-lg shadow-[#040c16] group rounded-md flex justify-center items-center sm:h-[200px] h-[170px] bg-cover relative ">
+			<div className="transform transition-transform duration-300 hover:scale-105 overflow-hidden shadow-lg shadow-[#0d1722] group rounded-md flex justify-center items-center sm:h-[200px] h-[170px] bg-cover relative ">
 				<img src={img} alt="My project photos" loading="lazy" />
 
 				{/* Hover effect container */}
@@ -37,13 +37,13 @@ const Work = () => {
 				</div>
 
 				{/* Grid layout for work items */}
-				<div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+				<div className="grid grid-cols-1 sm:grid-cols-3 gap-7">
 					<Works
-						href={'https://www.dee-jedi.github.io/Project_axios/'}
+						href={'https://dee-jedi.github.io/Project_axios/'}
 						img={img1}
 					/>
-					<Works href={'https://www.uma-nu.vercel.app'} img={img3} />
-					<Works href={'https://www.uma-nu.vercel.app'} img={img2} />
+					<Works href={'https://uma-nu.vercel.app'} img={img3} />
+					<Works href={'https://uma-nu.vercel.app'} img={img2} />
 				</div>
 			</div>
 		</div>
