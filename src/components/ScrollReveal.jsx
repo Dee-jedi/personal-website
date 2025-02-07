@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 
 const ScrollReveal = ({
 	children,
 	className,
 	animation = { y: 100, opacity: 0 },
 	duration = 1,
-	threshold = 0.2,
+	threshold = 0.1,
 }) => {
 	const { ref, inView } = useInView({
 		triggerOnce: true,
