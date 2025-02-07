@@ -1,10 +1,11 @@
 import React from 'react';
 import heroImg from '../assets/images/heroPics.png';
 import { TypeAnimation } from 'react-type-animation';
+import ScrollReveal from './ScrollReveal'; // Import ScrollReveal component
 
 const Hero = () => {
 	return (
-		<main className="max-w-[1200px] hero-des mt-[69px] mx-auto md:p-4 px-2 pb-16 ">
+		<main className="max-w-[1200px] hero-des mt-[69px] mx-auto md:p-4 px-2 pb-16">
 			<div className="grid grid-cols-1 sm:grid-cols-3 lg:gap-16 sm:gap-44 h-full">
 				<div className="my-auto mx-auto col-span-1 w-[300px] h-auto lg:w-[400px]">
 					<img
@@ -14,7 +15,11 @@ const Hero = () => {
 					/>
 				</div>
 
-				<div className="col-span-2 px-4 my-auto sm:space-y-9">
+				<ScrollReveal
+					className="col-span-2 px-4 my-auto sm:space-y-9"
+					animation={{ y: 100, opacity: 0 }}
+					duration={1}
+				>
 					<h1 className="text-white text-4xl sm:text-[45px] sm:leading-[52px] lg:text-8xl font-extrabold">
 						<span className="primary-color">I'm a</span> <br />
 						<TypeAnimation
@@ -39,8 +44,8 @@ const Hero = () => {
 
 					<div className="pt-4">
 						<a
-							href="divine-resume.pdf"
-							download="divine-resume.pdf"
+							href="final-resume.pdf"
+							download="final-resume.pdf"
 							aria-label="Download CV"
 							className="px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-r from-[#004e92] to-[#000428] text-[#f0f0f0] shadow-lg hover:opacity-95 transition-transform duration-300 ease-in-out"
 						>
@@ -55,7 +60,7 @@ const Hero = () => {
 							Contact
 						</a>
 					</div>
-				</div>
+				</ScrollReveal>
 			</div>
 		</main>
 	);

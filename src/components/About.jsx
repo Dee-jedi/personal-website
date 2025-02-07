@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutImg from '../assets/images/divineImg.jpg';
+import ScrollReveal from './ScrollReveal'; // Import ScrollReveal component
 
 const About = () => {
 	return (
@@ -9,7 +10,11 @@ const About = () => {
 		>
 			<div className="sm:grid sm:grid-cols-2 sm:py-16">
 				{/* About Text */}
-				<article className="flex flex-col mx-6 my-auto sm:gap-3">
+				<ScrollReveal
+					className="flex flex-col mx-6 my-auto sm:gap-3"
+					animation={{ y: 100, opacity: 0 }}
+					duration={1}
+				>
 					<h1 className="text-4xl font-bold mb-4 primary-color">
 						About Me
 					</h1>
@@ -20,16 +25,20 @@ const About = () => {
 						thrive on solving real-world problems with clean, efficient
 						code. Let’s build something exceptional together.
 					</p>
-				</article>
+				</ScrollReveal>
 
 				{/* About Image */}
-				<div className="flex justify-center items-center pt-8 px-6 md:py-0">
+				<ScrollReveal
+					className="flex justify-center items-center pt-8 px-6 md:py-0"
+					animation={{ y: 100, opacity: 0 }}
+					duration={1}
+				>
 					<img
 						src={aboutImg}
 						className="rounded-lg sm:rounded-3xl sm:h-[300px] sm:w-[300px]"
 						alt="About me"
 					/>
-				</div>
+				</ScrollReveal>
 			</div>
 		</div>
 	);

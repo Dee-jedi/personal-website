@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import {
 	About,
 	Contact,
@@ -14,18 +15,20 @@ import FormProvider from './context/FormContext';
 const App = () => {
 	return (
 		<>
-			<NavbarProvider>
-				<Navbar />
-			</NavbarProvider>
+			<Router>
+				<NavbarProvider>
+					<Navbar />
+				</NavbarProvider>
 
-			<Hero />
-			<Skills />
-			<About />
-			<Work />
-			<FormProvider>
-				<Contact />
-			</FormProvider>
-			<Footer />
+				<Hero />
+				<Skills />
+				<About />
+				<Work />
+				<FormProvider>
+					<Contact />
+				</FormProvider>
+				<Footer />
+			</Router>
 		</>
 	);
 };

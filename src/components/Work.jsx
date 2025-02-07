@@ -1,6 +1,5 @@
-import img1 from '../assets/images/img1.jpeg';
-import img2 from '../assets/images/img2.jpeg';
-import img3 from '../assets/images/img3.jpeg';
+import { uma, elib, hoobank, papaya } from './../assets/exports';
+import ScrollReveal from './ScrollReveal'; // Import ScrollReveal component
 
 const Work = () => {
 	const Works = ({ href, img }) => {
@@ -38,12 +37,40 @@ const Work = () => {
 
 				{/* Grid layout for work items */}
 				<div className="grid grid-cols-1 sm:grid-cols-3 gap-7">
-					<Works
-						href={'https://dee-jedi.github.io/Project_axios/'}
-						img={img1}
-					/>
-					<Works href={'https://uma-nu.vercel.app'} img={img3} />
-					<Works href={'https://uma-nu.vercel.app'} img={img2} />
+					<ScrollReveal
+						className="w-full"
+						animation={{ y: 100, opacity: 0 }}
+						duration={1}
+					>
+						<Works href={'https://papaya-jade.vercel.app'} img={papaya} />
+					</ScrollReveal>
+					<ScrollReveal
+						className="w-full"
+						animation={{ y: 100, opacity: 0 }}
+						duration={1}
+					>
+						<Works
+							href={'https://hoobank-dee.vercel.app'}
+							img={hoobank}
+						/>
+					</ScrollReveal>
+					<ScrollReveal
+						className="w-full"
+						animation={{ y: 100, opacity: 0 }}
+						duration={1}
+					>
+						<Works href={'https://uma-nu.vercel.app'} img={uma} />
+					</ScrollReveal>
+					<ScrollReveal
+						className="w-full"
+						animation={{ y: 100, opacity: 0 }}
+						duration={1}
+					>
+						<Works
+							href={'https://dee-jedi.github.io/Project_axios/'}
+							img={elib}
+						/>
+					</ScrollReveal>
 				</div>
 			</div>
 		</div>

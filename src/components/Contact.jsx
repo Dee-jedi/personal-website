@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import InputFields from './InputFields';
 import { FormContext } from '../context/FormContext';
+import ScrollReveal from './ScrollReveal'; // Import ScrollReveal component
 
 const Contact = () => {
 	const { handleSubmit, formData, errors, handleInputChange, isSubmitting } =
@@ -15,69 +16,77 @@ const Contact = () => {
 			<div className="max-w-[800px] sm:mx-auto mt-8 mx-1">
 				<div className="bg-[#161616] rounded-lg shadow-lg">
 					<div className="p-8 sm:p-10">
-						<form
-							action="https://getform.io/f/bwnnjeja"
-							method="POST"
+						{/* Applying ScrollReveal to the entire form */}
+						<ScrollReveal
 							className="space-y-6"
-							onSubmit={handleSubmit}
-							noValidate
+							animation={{ y: 100, opacity: 0 }}
+							duration={1}
 						>
-							<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-								<InputFields
-									type="text"
-									placeholder="Name"
-									id="name"
-									value={formData.name}
-									error={errors.name}
-								/>
-								<InputFields
-									type="email"
-									placeholder="Email"
-									id="email"
-									value={formData.email}
-									error={errors.email}
-								/>
-								<InputFields
-									type="text"
-									placeholder="Subject"
-									id="subject"
-									value={formData.subject}
-									error={errors.subject}
-								/>
-								<div className="relative">
-									<label htmlFor="message" className="sr-only">
-										Message
-									</label>
-									<textarea
-										rows={4}
-										placeholder="Message"
-										id="message"
-										name="message"
-										value={formData.message}
-										onChange={handleInputChange}
-										className={`bg-[#161616] w-full p-4 text-base text-gray-300 placeholder:text-gray-500 border ${
-											errors.message
-												? 'border-red-500'
-												: 'border-gray-700'
-										} rounded-md focus:outline-none focus:border-[#00c6ff] resize-none transition duration-200`}
-									/>
-									{errors.message && (
-										<p className="text-red-500 text-sm mt-1">
-											{errors.message}
-										</p>
-									)}
-								</div>
-							</div>
-							<button
-								type="submit"
-								disabled={isSubmitting}
-								className={`mt-6 w-full p-4 text-lg font-semibold text-white bg-primary-color rounded-md shadow-lg hover:opacity-90 transition duration-200 ${
-									isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-								}`}
+							<form
+								action="https://getform.io/f/bwnnjeja"
+								method="POST"
+								onSubmit={handleSubmit}
+								noValidate
 							>
-								{isSubmitting ? 'Sending...' : 'Send'}
-							</button>
-						</form>
+								<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+									<InputFields
+										type="text"
+										placeholder="Name"
+										id="name"
+										value={formData.name}
+										error={errors.name}
+									/>
+									<InputFields
+										type="email"
+										placeholder="Email"
+										id="email"
+										value={formData.email}
+										error={errors.email}
+									/>
+									<InputFields
+										type="text"
+										placeholder="Subject"
+										id="subject"
+										value={formData.subject}
+										error={errors.subject}
+									/>
+									<div className="relative">
+										<label htmlFor="message" className="sr-only">
+											Message
+										</label>
+										<textarea
+											rows={4}
+											placeholder="Message"
+											id="message"
+											name="message"
+											value={formData.message}
+											onChange={handleInputChange}
+											className={`bg-[#161616] w-full p-4 text-base text-gray-300 placeholder:text-gray-500 border ${
+												errors.message
+													? 'border-red-500'
+													: 'border-gray-700'
+											} rounded-md focus:outline-none focus:border-[#00c6ff] resize-none transition duration-200`}
+										/>
+										{errors.message && (
+											<p className="text-red-500 text-sm mt-1">
+												{errors.message}
+											</p>
+										)}
+									</div>
+								</div>
+								<button
+									type="submit"
+									disabled={isSubmitting}
+									className={`mt-6 w-full p-4 text-lg font-semibold text-white bg-primary-color rounded-md shadow-lg hover:opacity-90 transition duration-200 ${
+										isSubmitting
+											? 'opacity-50 cursor-not-allowed'
+											: ''
+									}`}
+								>
+									{isSubmitting ? 'Sending...' : 'Send'}
+								</button>
+							</form>
+						</ScrollReveal>
 					</div>
 				</div>
 			</div>
